@@ -14,6 +14,7 @@
         <h2>Bem-vindo ao sistema de Gerenciamento de Usuários da Sky Fit Recife.</h2>
         você pode cadastrar, editar, excluir e visualizar dados dos membros, além de acompanhar informações sobre faixas etárias e tipos de plano de forma simples e prática.</h2>
         <br>
+
         <!-- Adicionar novo usuário -->
         <form id="addUsuarioForm">
             <h2>Adicionar Usuário</h2>
@@ -77,9 +78,22 @@
 
         <!-- Gráfico -->
         <div>
-            <h2>Gráfico de alunos Matriculados por idade </h2>
+            <h2>Gráfico de alunos Matriculados por idade</h2>
             <canvas id="chart1" width="400" height="200"></canvas>
         </div>
+
+        <!-- Gerar QR Code -->
+        <section class="container">
+            <h2>Gerar QR Code de acesso aluno matriculado</h2>
+            <h3> Abaixo, adicione o número da matricula do aluno para gerar QR Code de Acesso nas catracas das unidades SkyFit. </h3>
+            <form id="qrCodeForm">
+                <input type="text" id="qrText" name="qrText" required placeholder="Número matricula" >
+                <button type="submit">Gerar Acesso</button>
+            </form>
+            <div id="qrCodeResult">
+                <!-- QR Code será exibido aqui -->
+            </div>
+        </section>
     </section>
 
     <script src="script.js"></script>

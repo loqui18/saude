@@ -186,3 +186,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// Função para gerar QR Code
+document.getElementById('qrCodeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const text = document.getElementById('qrText').value;
+    const apiKey = 'KHw8JjtNF5QaEP697DSsVMr1ivLhCTfc'; // API Key fornecida
+    const qrCodeUrl = `https://www.qrcoder.co.uk/api/v4/?key=${apiKey}&text=${encodeURIComponent(text)}`;
+
+    // Exibir o QR Code
+    const qrCodeResult = document.getElementById('qrCodeResult');
+    qrCodeResult.innerHTML = `<h3>QR Code Gerado:</h3><img src="${qrCodeUrl}" alt="QR Code" />`;
+});
+
+
