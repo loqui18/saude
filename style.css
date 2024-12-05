@@ -1,14 +1,67 @@
-.container{
-    display: flex;
-    gap: 40px;
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.grafico{
-    height: 600px; 
-    height: 600px; 
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form h2 {
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+canvas {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+form input[type="text"], form input[type="number"] {
+    width: 80%;
 }

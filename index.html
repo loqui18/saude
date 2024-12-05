@@ -3,48 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <title>Gerenciamento de Usuários - Academia da Cidade</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
-</head> 
-<body>  
+</head>
+<body>
     <section class="container">
-        <!-- Criar uma coluna -->
-        <form id="dadosForm">
-            <h2>Adicionar os Dados:</h2>
-            <label for="objectId">Object ID:</label>
-            <input type="text" id="editObjectId" name="objectId" required>
-            <br>
-            <label for="Ano_Nascimento">Ano Nascimento:</label>
-            <input type="number" id="Ano_Nascimento" name="Ano_Nascimento" required>
-            <br>
-            <button type="submit">Enviar</button>
+        <h1>Gerenciamento de Usuários - Sky Fit Recife</h1>
+        <br>
+        <h2>Bem-vindo ao sistema de Gerenciamento de Usuários da Sky Fit Recife.</h2>
+        você pode cadastrar, editar, excluir e visualizar dados dos membros, além de acompanhar informações sobre faixas etárias e tipos de plano de forma simples e prática.</h2>
+        <br>
+        <!-- Adicionar novo usuário -->
+        <form id="addUsuarioForm">
+            <h2>Adicionar Usuário</h2>
+            <label for="nomeUsuario">Nome:</label>
+            <input type="text" id="nomeUsuario" name="nomeUsuario" required placeholder="Digite o nome do usuário">
+            
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+            
+            <label for="anoNascimento">Ano de Nascimento:</label>
+            <input type="number" id="anoNascimento" name="anoNascimento" required placeholder="Digite o ano de nascimento">
+            
+            <label for="tipoPlano">Tipo de Plano:</label>
+            <select id="tipoPlano" name="tipoPlano">
+                <option value="basico">Básico</option>
+                <option value="premium">Premium</option>
+            </select>
+            
+            <button type="submit">Adicionar</button>
         </form>
-        <!-- Editar as colunas -->
-        <form id="editarForm">
-            <h2>Editar os Dados:</h2>
-            <label for="objectId">Object ID:</label>
-            <input type="text" id="editObjectId" name="objectId" required>
-            <br>
-            <label for="Ano_Nascimento">Ano Nascimento:</label>
-            <input type="text" id="editAno_Nascimento" name="Ano_Nascimento" required>
-            <br>
-            <button type="submit">Atualizar</button>
+
+        <!-- Editar usuário -->
+        <form id="editUsuarioForm">
+            <h2>Editar Usuário</h2>
+            <label for="editObjectId">ID do Usuário:</label>
+            <input type="text" id="editObjectId" name="editObjectId" required placeholder="Digite o ID do usuário">
+            
+            <label for="editNomeUsuario">Nome:</label>
+            <input type="text" id="editNomeUsuario" name="editNomeUsuario" placeholder="Digite o novo nome">
+            
+            <label for="editSexo">Sexo:</label>
+            <select id="editSexo" name="editSexo">
+                <option value="">Selecionar...</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+            
+            <label for="editAnoNascimento">Ano de Nascimento:</label>
+            <input type="number" id="editAnoNascimento" name="editAnoNascimento" placeholder="Digite o novo ano de nascimento">
+            
+            <label for="editTipoPlano">Tipo de Plano:</label>
+            <select id="editTipoPlano" name="editTipoPlano">
+                <option value="">Selecionar...</option>
+                <option value="basico">Básico</option>
+                <option value="premium">Premium</option>
+            </select>
+            
+            <button type="submit">Editar</button>
         </form>
-        <!-- Deletar um registro -->
-        <form id="deletarForm">
-            <h2>Deletar os Dados:</h2>
-            <label for="deleteObjectId">Object ID:</label>
-            <input type="text" id="deleteObjectId" name="deleteObjectId" required>
-            <br>
+
+        <!-- Deletar usuário -->
+        <form id="deleteUsuarioForm">
+            <h2>Deletar Usuário</h2>
+            <label for="deleteObjectId">ID do Usuário:</label>
+            <input type="text" id="deleteObjectId" name="deleteObjectId" required placeholder="Digite o ID do usuário">
             <button type="submit">Deletar</button>
         </form>
-        <!-- Buscar o grafico -->
-        <div class="grafico">
-            <canvas id="chart1" max-width="100" max-height="100"></canvas>
-        </div>
-    </section> 
 
-    <script src="./script.js"></script>
+        <!-- Gráfico -->
+        <div>
+            <h2>Gráfico de alunos Matriculados por idade </h2>
+            <canvas id="chart1" width="400" height="200"></canvas>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
