@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    gap: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.grafico{
+    height: 600px; 
+    height: 600px; 
+}
